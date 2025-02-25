@@ -1,11 +1,11 @@
 const user = JSON.parse(localStorage.getItem("user"));
 if (user) {
-    updateUserData(user);
+    updateUserInfo(user);
 } else {
     window.location.href = "signin.html";
 }
 
-function updateUserData(user) {
+function updateUserInfo(user) {
     const username = document.querySelector(".user_info h1");
     const user_email = document.querySelectorAll('.email')
     if (user.name && user.surname && user.email) {
