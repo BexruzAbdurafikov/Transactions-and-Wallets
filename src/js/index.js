@@ -8,4 +8,4 @@ const user = JSON.parse(localStorage.getItem('user')) || {};
 
 updateUserInfo(user);
 renderWallets(wallets.splice(0, 4));
-renderLastTransactions(last_transactions);
+renderLastTransactions(last_transactions.splice(0, 7));

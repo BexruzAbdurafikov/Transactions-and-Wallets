@@ -15,6 +15,14 @@ export const last_transactions = JSON.parse(localStorage.getItem("last_transacti
     { id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000, when: '4 дня назад' },
     { id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000, when: '4 дня назад' },
     { id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000, when: '4 дня назад' },
+    { id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000, when: '4 дня назад' },
+    { id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000, when: '4 дня назад' },
+    { id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000, when: '4 дня назад' },
+    { id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000, when: '4 дня назад' },
+    { id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000, when: '4 дня назад' },
+    { id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000, when: '4 дня назад' },
+    { id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000, when: '4 дня назад' },
+    { id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000, when: '4 дня назад' },
 ];
 
 export const gradients = [
