@@ -70,27 +70,15 @@ header {
     border-radius: 15px;
     margin-bottom: 74px;
 
-    h3 {
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 29.11px;
-        margin-bottom: 21px;
-    }
-
-    a {
-        color: #0047FF;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19.6px;
-    }
-
     .wallets {
+        flex-wrap: wrap;
         display: flex;
         gap: 24px;
         margin-bottom: 21px;
     }
 
     .wallet {
+        min-width: 282px;
         width: 282px;
         height: 160px;
         border-radius: 15px;
@@ -106,71 +94,29 @@ header {
     .wallet:hover {
         transform: scale(1.02);
     }
-
-    .wallet1 {
-        background: linear-gradient(84.37deg, #D7816A 2.27%, #BD4F6C 92.26%);
-    }
-
-    .wallet2 {
-        background: linear-gradient(84.37deg, #5F0A87 2.27%, #A4508B 92.26%);
-    }
-
-    .wallet3 {
-        background: linear-gradient(84.37deg, #20BF55 2.27%, #01BAEF 92.26%);
-    }
-
-    .wallet4 {
-        background: linear-gradient(84.37deg, #380036 2.27%, #0CBABA 92.26%);
-    }
 }
 
 .active {
     color: #0047FF;
 }
 
-.last_transations {
-    h1 {
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 29.11px;
-        margin-bottom: 32px;
-    }
+button {
+    margin-top: 70px;
+    background-color: #0047FF;
+    color: white;
+    width: 438px;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
 
-    a {
-        color: #0047FF;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19.6px;
-    }
+button:hover {
+    background-color: #0036C7;
+    transform: scale(1.02);
+}
 
-    table {
-        width: 100%;
-        text-align: left;
-        border-collapse: collapse;
-        margin-bottom: 21px;
-
-        th {
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 17.15px;
-            color: #B9C0D1;
-        }
-
-        th,
-        td {
-            border-bottom: 1px solid #979797;
-            padding: 15px;
-        }
-
-        td {
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 16.98px;
-        }
-
-        tr:hover {
-            background: #f9f9f9;
-            cursor: pointer;
-        }
-    }
+button:active {
+    transform: scale(1);
 }

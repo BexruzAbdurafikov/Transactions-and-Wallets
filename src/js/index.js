@@ -7,5 +7,5 @@ checkUserAccess();
 const user = JSON.parse(localStorage.getItem('user')) || {};
 
 updateUserInfo(user);
-renderWallets(wallets);
+renderWallets(wallets.splice(0, 4));
 renderLastTransactions(last_transactions);

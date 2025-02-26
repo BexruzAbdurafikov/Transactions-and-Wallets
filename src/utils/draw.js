@@ -1,5 +1,7 @@
+import { gradients } from "./db.js";
+
 export function updateUserInfo(user) {
-    const username = document.querySelector(".user_info h1");
+    const username = document.querySelector(".text h1");
     const user_email = document.querySelectorAll('.email')
     if (user.name && user.surname && user.email) {
         user_email.forEach((item) => {
@@ -7,6 +9,13 @@ export function updateUserInfo(user) {
         });
         username.textContent = `Добро пожаловать, ${user.name} ${user.surname}`;
     }
+}
+
+export function updateUserEmail(user) {
+    const user_email = document.querySelectorAll('.email')
+    user_email.forEach((item) => {
+        item.textContent = user.email;
+    });
 }
 
 export function renderWallets(arr) {
@@ -18,8 +27,8 @@ export function renderWallets(arr) {
         const wallet_type = document.createElement('div');
         const wallet_currency = document.createElement('div');
 
-
-        wallet_div.classList.add('wallet', `wallet${index + 1}`);
+        wallet_div.classList.add('wallet');
+        wallet_div.style.background = getRandomGradient();
 
         wallet_type.textContent = wallet.type;
         wallet_currency.textContent = wallet.currency;
@@ -50,4 +59,8 @@ export function renderLastTransactions(arr) {
         tr.append(transaction_id, transaction_type, transaction_category, transaction_amount, transaction_when);
         transactions_container.append(tr);
     });
+}
+
+export function getRandomGradient() {
+    return gradients[Math.floor(Math.random() * gradients.length)];
 }
