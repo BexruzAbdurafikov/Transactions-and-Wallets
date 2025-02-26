@@ -8,25 +8,18 @@ signin.onsubmit = (e) => {
     const email = fm.get('email');
     const password = fm.get('password');
 
-    const user = users.find((item) => item.email === email);
+    const user = users.find((item) => item.email === email && item.password === password);
 
     if (!user) {
         alert('Пользователь не найден!');
         return;
     }
 
-    if (user.password !== password) {
-        alert('Неверный пароль!');
-        return;
-    }
-
-    if (user && user.password === password) {
-        window.location.href = 'mainPage.html'
-    }
     localStorage.setItem('user', JSON.stringify(user));
-    
+
     signin.reset();
-    updateUserData(user)
+
+    window.location.href = 'mainPage.html';
 };
 
 

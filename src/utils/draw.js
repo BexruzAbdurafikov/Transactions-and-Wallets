@@ -1,11 +1,4 @@
-const user = JSON.parse(localStorage.getItem("user"));
-if (user) {
-    updateUserInfo(user);
-} else {
-    window.location.href = "signin.html";
-}
-
-function updateUserInfo(user) {
+export function updateUserInfo(user) {
     const username = document.querySelector(".user_info h1");
     const user_email = document.querySelectorAll('.email')
     if (user.name && user.surname && user.email) {
@@ -16,23 +9,7 @@ function updateUserInfo(user) {
     }
 }
 
-const wallets = JSON.parse(localStorage.getItem("wallets")) ?? [
-    {id: 1, type: 'Visa', currency: 'RUB'},
-    {id: 1, type: 'Visa', currency: 'RUB'},
-    {id: 1, type: 'Visa', currency: 'RUB'},
-    {id: 1, type: 'Visa', currency: 'RUB'},
-];
-
-const last_transactions = JSON.parse(localStorage.getItem("last_transactions")) ?? [
-    {id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000 , when: '4 дня назад'},
-    {id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000 , when: '4 дня назад'},
-    {id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000 , when: '4 дня назад'},
-    {id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000 , when: '4 дня назад'},
-    {id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000 , when: '4 дня назад'},
-    {id: 1232312, type: 'Visa', category: 'Автомобиль', amount: 414000000 , when: '4 дня назад'},
-];
-
-function renderWallets(arr) {
+export function renderWallets(arr) {
     const wallets_container = document.querySelector('.wallets');
     wallets_container.innerHTML = '';
 
@@ -51,9 +28,8 @@ function renderWallets(arr) {
         wallets_container.append(wallet_div);
     });
 }
-renderWallets(wallets);
 
-function renderLastTransactions(arr) {
+export function renderLastTransactions(arr) {
     const transactions_container = document.querySelector('tbody');
     transactions_container.innerHTML = '';
 
@@ -75,5 +51,3 @@ function renderLastTransactions(arr) {
         transactions_container.append(tr);
     });
 }
-
-renderLastTransactions(last_transactions);
