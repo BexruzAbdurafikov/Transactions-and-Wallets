@@ -1,10 +1,12 @@
+import { drawDeafultLayout } from "../layouts/default.js";
 import { checkUserAccess } from "../middleware/auth.js";
 import { wallets } from "../utils/db.js";
-import { renderWallets, updateUserEmail, updateUserInfo } from "../utils/draw.js";
+import { renderWallets, updateUserInfo } from "../utils/draw.js";
+import { getUser } from "../utils/helpers.js";
 
+const user = getUser();
+
+drawDeafultLayout();
+updateUserInfo(user);
 checkUserAccess();
-
-const user = JSON.parse(localStorage.getItem('user')) || {};
-updateUserEmail(user);
-
 renderWallets(wallets);

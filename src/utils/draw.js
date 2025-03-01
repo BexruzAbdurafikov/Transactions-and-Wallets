@@ -11,13 +11,6 @@ export function updateUserInfo(user) {
     }
 }
 
-export function updateUserEmail(user) {
-    const user_email = document.querySelectorAll('.email')
-    user_email.forEach((item) => {
-        item.textContent = user.email;
-    });
-}
-
 export function renderWallets(arr) {
     const wallets_container = document.querySelector('.wallets');
     wallets_container.innerHTML = '';

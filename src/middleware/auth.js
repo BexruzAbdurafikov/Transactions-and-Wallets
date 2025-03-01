@@ -1,7 +1,9 @@
-export function checkUserAccess() {
-    const user = JSON.parse(localStorage.getItem('user'));
+import { getUser } from "../utils/helpers.js";
 
-    if (!user) {
-        window.location.href = 'signin.html';
+export function checkUserAccess() {
+    const user = getUser();
+
+    if (!user?.email) {
+        window.location.href = './signin.html';
     }
 }
