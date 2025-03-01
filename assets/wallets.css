@@ -101,7 +101,7 @@ header {
 }
 
 button {
-    margin-top: 70px;
+    margin-top: 20px;
     background-color: #0047FF;
     color: white;
     width: 438px;
@@ -120,3 +120,66 @@ button:hover {
 button:active {
     transform: scale(1);
 }
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal_content {
+    position: relative;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    width: 438px;
+
+    .close{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+    }
+}
+
+form {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    input {
+        padding-left: 25px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19.6px;
+        width: 100%;
+        height: 56px;
+        border-radius: 10px;
+        margin-bottom: 8px;
+    }
+
+    input:focus, select:focus{
+        border: 1px solid #007bff;
+        outline: none;
+    }
+
+    button{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

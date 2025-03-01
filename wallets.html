@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wallets</title>
-    <link rel="stylesheet" href="/assets/wallets.css">
+    <link rel="stylesheet" href="./assets/wallets.css">
 </head>
+
 <body>
     <div class="container">
         <div class="text">
             <h1>Мои кошельки</h1>
             <p class="email">alexadams@google.com</p>
         </div>
-    
         <div class="myWallets">
             <div class="wallets"></div>
+            <button class="add-wallet">Добавить</button>
         </div>
-        <button>Добавить</button>
+        
+    </div>
+    <div class="modal">
+        <div class="modal_content">
+            <span class="close">
+                <svg width="20" height="20" viewBox="0 0 26 26" fill="black" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 2L2 24" stroke="black" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M2 2L24 24" stroke="black" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </span>
+            <form name="wallet_form">
+                <h1>Добавить кошелек</h1>
+                <input type="text" placeholder="Имя" name="name">
+                <input type="text" placeholder="Валюта" name="currency">
+                <button>Добавить</button>
+            </form>
+        </div>
     </div>
     <script type="module" src="./src/js/wallets.js"></script>
 </body>
+
 </html>
