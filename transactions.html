@@ -26,6 +26,26 @@
         </div>
         <button>Добавить</button>
     </div>
+
+    <div class="modal">
+        <div class="modal_content">
+            <span class="close">
+                <svg width="20" height="20" viewBox="0 0 26 26" fill="black" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 2L2 24" stroke="black" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M2 2L24 24" stroke="black" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </span>
+            <form name="wallet_form">
+                <h1>Добавить транзакцию</h1>
+                <input type="text" placeholder="Из кошелька" name="type">
+                <input type="text" placeholder="Сумма" name="amount">
+                <input type="text" placeholder="Категория" name="category">
+                <button>Добавить</button>
+            </form>
+        </div>
+    </div>
     <script type="module" src="./src/js/transactions.js"></script>
 </body>
 

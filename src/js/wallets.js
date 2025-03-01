@@ -35,6 +35,7 @@ walletForm.onsubmit = (e) => {
     }); 
     wallets.push(wallet);
     renderWallets(wallets);
+    localStorage.setItem('wallet', JSON.stringify(wallets));
     addWallet.close();
     walletForm.reset();
 }

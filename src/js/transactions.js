@@ -6,6 +6,8 @@ import { getUser } from "../utils/helpers.js";
 
 const user = getUser();
 
+
+
 drawDeafultLayout();
 updateUserInfo(user);
 checkUserAccess();
