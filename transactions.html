@@ -24,7 +24,7 @@
                 <tbody></tbody>
             </table>
         </div>
-        <button>Добавить</button>
+        <button class="add-transaction">Добавить</button>
     </div>
 
     <div class="modal">
@@ -37,11 +37,11 @@
                         stroke-linejoin="round" />
                 </svg>
             </span>
-            <form name="wallet_form">
+            <form name="transaction_form">
                 <h1>Добавить транзакцию</h1>
-                <input type="text" placeholder="Из кошелька" name="type">
-                <input type="text" placeholder="Сумма" name="amount">
-                <input type="text" placeholder="Категория" name="category">
+                <input type="text" placeholder="Из кошелька" name="type" required>
+                <input type="number" placeholder="Сумма" name="amount" required>
+                <input type="text" placeholder="Категория" name="category" required>
                 <button>Добавить</button>
             </form>
         </div>
